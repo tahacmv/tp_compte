@@ -50,7 +50,7 @@ public class Compte {
             if (this.solde - montant >= -this.decouvertMaximalAutorise) {
                 this.debiter(montant);
                 compteBeneficiaire.crediter(montant);
-                System.out.println("Virement de " + montant + "€ effectué vers le compte " + destinataire.numeroCompte);
+                System.out.println("Virement de " + montant + "€ effectué vers le compte " + compteBeneficiaire.numeroCompte);
             } else {
                 System.out.println("Opération impossible. Solde insuffisant pour effectuer le virement.");
             }
