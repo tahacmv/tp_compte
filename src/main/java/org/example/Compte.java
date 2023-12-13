@@ -4,22 +4,18 @@ public class Compte {
 
     // Attributs
     private int numeroCompte;
-    private String nomTitulaire;
-    private String prenomTitulaire;
-    private String adresseTitulaire;
     private double solde;
     private double decouvertMaximalAutorise;
     private double debitMaximalAutorise;
+    private final  Titulaire titulaire;
 
     // Variable de classe
     private static final double DECOUVERT_DEFAUT = 800.0;
     private static final double DEBIT_DEFAUT = 1000.0;
 
-    public Compte(int numeroCompte, String nomTitulaire, String prenomTitulaire, String adresseTitulaire, double solde, double decouvertMaximalAutorise, double debitMaximalAutorise) {
+    public Compte(int numeroCompte ,Titulaire titulaire, double solde, double decouvertMaximalAutorise, double debitMaximalAutorise) {
         this.numeroCompte = numeroCompte;
-        this.nomTitulaire = nomTitulaire;
-        this.prenomTitulaire = prenomTitulaire;
-        this.adresseTitulaire = adresseTitulaire;
+        this.titulaire=titulaire;
         this.solde = solde;
         this.decouvertMaximalAutorise = decouvertMaximalAutorise;
         this.debitMaximalAutorise = debitMaximalAutorise;
@@ -66,8 +62,8 @@ public class Compte {
 
     public String consulterInformations() {
         String etatCompte = "Numéro de compte : " + this.numeroCompte +
-                "\nTitulaire : " + this.prenomTitulaire + " " + this.nomTitulaire +
-                "\nAdresse : " + this.adresseTitulaire +
+                "\nTitulaire : " + this.titulaire.getPrenomTitulaire() + " " + this.titulaire.getNomTitulaire() +
+                "\nAdresse : " + this.titulaire.getAdresseTitulaire() +
                 "\nSolde : " + this.solde + "€" +
                 "\nDécouvert maximal autorisé : " + this.decouvertMaximalAutorise + "€" +
                 "\nDébit maximal autorisé : " + this.debitMaximalAutorise + "€" +
