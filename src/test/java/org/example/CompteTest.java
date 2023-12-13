@@ -1,22 +1,23 @@
 package org.example;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 class CompteTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void crediter() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void debiter() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void virement() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void consulterInformations() {
     }
 }
